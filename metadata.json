@@ -1,0 +1,6 @@
+{
+  "name": "JARVIS AI",
+  "description": "Futuristic AI Personal Assistant with Voice UI, Orb Visualizer, Calendar & Meetings, Task Delegation, HRMS, and Device Management.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

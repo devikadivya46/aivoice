@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #05050D;
+    --surface-1: #0B0B18;
+    --surface-2: #121225;
+    --surface-3: #18182E;
+    --primary: #8B5CF6;
+    --primary-light: #A78BFA;
+    --blue: #3B82F6;
+    --cyan: #22D3EE;
+    --magenta: #EC4899;
+    --success: #10B981;
+    --warning: #F59E0B;
+    --error: #EF4444;
+    --text-main: #F8FAFC;
+    --text-muted: #94A3B8;
+  }
+
+  body {
+    background-color: #05050D;
+    color: #F8FAFC;
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0B0B18;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1E1E38;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #383860;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes rotateSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateReverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translateY(0px) scale(0.8);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0px) scale(0.8);
+    opacity: 0.2;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.animate-rotate-slow {
+  animation: rotateSlow 20s linear infinite;
+}
+
+.animate-rotate-reverse {
+  animation: rotateReverse 15s linear infinite;
+}
+
+/* Futuristic glassmorphism */
+.glass-panel {
+  background: rgba(11, 11, 24, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-elevated {
+  background: rgba(18, 18, 37, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.glow-purple {
+  box-shadow: 0 0 25px -5px rgba(139, 92, 246, 0.35);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 25px -5px rgba(34, 211, 238, 0.35);
+}
+
+.glow-magenta {
+  box-shadow: 0 0 25px -5px rgba(236, 72, 153, 0.35);
+}
+
